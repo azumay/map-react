@@ -25,7 +25,7 @@ export default function Map() {
   const onEachFeature = (feature, layer) => {
     layer.on({
       mouseover: (e) => {
-        layer.setStyle({ fillColor: "blue" });
+        layer.setStyle({ fillColor: feature.properties.color });
       },
       mouseout: (e) => {
         layer.setStyle({ fillColor: "grey" });
